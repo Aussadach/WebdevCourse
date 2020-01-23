@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+
+<html>
+    <head>
+
+        <meta  charset="utf-8">
+        <title>Change Content and Att</title>
+        <style>
+            .blueblock{ background-color: #4267B2;
+                        color :white;
+                        height: auto;
+                        width:auto;
+            }
+            .yellowblock{background-color: rgb(222,224,85);
+                         color :white;
+                         height: 100px;
+                         width:auto;
+            }
+            .greenblock{background-color: greenyellow;
+                         color :white;
+                         height: auto ;
+                         width:auto;
+            }
+            .great{background-color: #5a3479;}
+        </style>
+        <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+
+    </head>
+    <body>
+        <div class="blueblock" id="facebook">
+
+            <p>Facebook is <span class="great"> great
+                
+            </span>.</p>
+            
+        </div>
+        <div class="yellowblock" id="apple">
+            <p>Apple</p>
+        </div>
+        <div class="greenblock" id ="microsoft">
+            <p id="MicrosoftParagraph">Microsoft</p>
+            <p><a href="http://www.mircrosoft.com" title="microsoft" id="microsoftlink">Microsoft Link</a></p>
+        </div>
+        <p>Enter Your name<input type="#"></p>
+        <button id="changefacebook">Change Facebook Text</button>
+        <button id="changeApple">Change Apple html</button>
+        <button id="changeinput">Change Input value</button>
+        <button id="changemicrosoft">Change Microsoft</button>
+        <button id="addtext">Add Text.</button>
+        
+        <script>
+            $(function(){
+                $("#changefacebook").click(function(){
+                    $("#facebook").text("This is facebook");
+
+                });
+                $("#changeinput").click(function(){
+                    $("input").val("sam");
+
+                });
+                $("#changemicrosoft").click(function(){
+                    $("#microsoftlink").attr({"href" : "http://www.google.com","title" : "google" });
+
+                });
+                // $("#addtext").click(function(){
+                //     $("#microsoft").append("<ul><li>BMW</li><li>BMW</li><li>audi</li><li>Mercedes</li></ul>");
+                // });
+                // $("#addtext").click(function(){
+                //     $("#microsoft").prepend("<ul><li>BMW</li><li>BMW</li><li>audi</li><li>Mercedes</li></ul>"); //Add to at Beginning
+                // });
+                $("#addtext").click(function(){
+                $("#MicrosoftParagraph").after("<p>New Paragrapht.</p>");
+                
+
+                
+                })
+
+
+
+            });
+
+        </script>
+    </body>
+</html>

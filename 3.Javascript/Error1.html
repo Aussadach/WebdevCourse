@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+
+<htm>
+    <head>
+        <meta charset="utf-8">
+        <title>Loop1</title>
+        <style>
+            #error{
+                color: brown;
+
+            }
+
+        </style>
+
+
+    </head>
+    <body>
+       <p id="myParagraph">Javascript</p>
+       <p id="error">Error Message:</p>
+        <script >
+        try{
+            sum(3,4);}
+        catch(err){
+            document.getElementById("error").innerHTML = err.message ;
+
+        }
+        </script>
+
+    </body>
+
+
+
+</htm>

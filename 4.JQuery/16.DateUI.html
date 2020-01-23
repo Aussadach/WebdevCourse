@@ -1,0 +1,93 @@
+<!DOCTYPE html>
+
+<html>
+    <head>
+
+        <meta  charset="utf-8">
+        <title>jQuery Effect</title>
+        <style>
+            .blueblock{ background-color: #4267B2;
+                        color :white;
+                        height: 100px;
+                        width: auto ;
+            }
+            .yellowblock{background-color: rgb(222,224,85);
+                         color :white;
+                         height: 100px;
+                         width:auto;
+            }
+            .greenblock{background-color: greenyellow;
+                         color :white;
+                         height: auto ;
+                         width:auto;
+            }
+            .great{background-color: #5a3479;}
+            .sans-seriff{
+                font-family:sans-serif;
+
+            }
+        
+         
+        </style>
+        <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+        <link
+        rel="stylesheet"
+        href="https://ajax.googleapis.com/ajax/libs/jqueryui/1.12.1/themes/smoothness/jquery-ui.css"
+    />
+        <script src="https://ajax.googleapis.com/ajax/libs/jqueryui/1.12.1/jquery-ui.min.js"></script>
+</head>
+    </head>
+    <body>
+        
+        <div class="blueblock ui-corner-all" id="facebook">
+
+            <p>Facebook is <span class="great" id="Great"> great
+                
+            </span>.</p>
+            <p>Flight departure date:<input id="departure"></p>
+            <p>Flight return date:<input id="return"></p>
+        </div>
+        
+            <div class="yellowblock sans-seriff ui-corner-all" id="apple">
+                <p>Apple</p>
+            
+
+        </div>
+        <div class="greenblock ui-corner-all" id ="microsoft">
+            <p id="MicrosoftParagraph">Microsoft</p>
+            <p><a href="http://www.mircrosoft.com" title="microsoft" id="microsoftlink">Microsoft Link</a></p>
+        </div>
+        
+        <p>Enter Your name<input type="#"></p>
+        
+        <script>
+            $(function(){  
+                $("#departure").datepicker({
+                    showAnim:"slideDown",
+                    changeYear:true,
+                    numberOfMonths :2,
+                    dateFormat: "dd/M/yy",
+                    showOn: "button",
+                    buttonImage : "images/iconfinder_calendar_285670 22x22.png",
+                    buttonImageOnly : true,
+                    buttonText :"Choose your departure date.",
+                    minDate :+0,
+                    //minDate: "+12M 10D",
+                    onClose: function(selectedDate){
+                        $("#return").datepicker("option","minDate",selectedDate)
+
+                    },
+                    showWeek : true
+
+                });
+                $("#return").datepicker({
+                    dateFormat: "dd/M/yy", //Have to be same format
+
+
+                });
+
+            })
+
+        </script>
+    </body>
+</html>

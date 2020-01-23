@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="utf-8">
+        <title>lists</title>
+        <style>
+        ul.list1{ /*list-style: lower-latin;*/
+                   /* list-style: square;*/
+                   list-style-image: url(images/bluesquare.gif);
+        }
+        ul.list2{
+                list-style: none;
+                padding: 0;
+                margin: 0;;
+        }
+        ul.list2 li{
+                background-image: url(images/bluesquare.gif);
+                background-repeat: no-repeat;
+                background-position:0px center; /*(vertical)*/
+                padding-left:30px ;
+        }
+        </style>
+    </head>
+    <body>
+    <p> A list of capitals:</p>
+        <ul class="list1">
+            <li>Madrid</li>
+            <li>Paris</li>
+            <li>London</li>
+            <li>Bangkok</li>
+        </ul>
+    <p> A list of European capitalss:</p>
+        <ul class="list2">
+            <li>Madrid</li>
+            <li>Paris</li>
+            <li>London</li>
+            <li>Bangkok</li>
+
+        </ul>
+    </body>
+</html>

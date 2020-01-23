@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+
+<html>
+    <head>
+
+        <meta  charset="utf-8">
+        <title>3D transform</title>
+        <style>
+            .blueblock{ background-color: #4267B2;
+                        color :white;
+                        height: 100px;
+                        width:100px;
+                        position: relative;
+                        -webkit-animation: myanimation 3s;
+
+
+            }
+            /*@-webkit-keyframes myanimation {
+                from{background: green;
+
+                }
+                to{background: #4267B2;
+
+                }
+            }*/
+            @-webkit-keyframes myanimation{
+                0% {background: red; left: 0px; top: 0px}
+                25% {background: yellow; left: 200px; top: 0px}
+                50% {background: green; left: 200px; top: 200px}
+                75% {background:blue; left: 0px; top: 200px}
+                100% {background: red; left: 0px; top: 0px}
+
+
+            }
+            .yellowblock{background-color: rgb(222,224,85);
+                         color :white;
+                         height: 100px;
+                         width:auto;
+            }
+
+
+            .greenblock{background-color: greenyellow;
+                         color :white;
+                         height: 100px;
+                         width:auto;
+                        
+            }
+            
+            .great{background-color: #5a3479;}
+        </style>
+
+    </head>
+    <body>
+        <div class="blueblock">
+
+            <p>Facebook is <span class="great"> great
+                
+            </span>.</p>
+            
+        </div>
+        <div class="yellowblock">
+            <p>Apple</p>
+        </div>
+        <div class="greenblock">
+            <p>Microsoft</p>
+        </div>
+    </body>
+</html>

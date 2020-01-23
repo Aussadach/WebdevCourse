@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+
+<html>
+    <head>
+
+        <meta  charset="utf-8">
+        <title>Internal CSS</title>
+        <style>
+            .blueblock{ background-color: #4267B2;
+                        color :white;
+                        height: 100px;
+                        width:auto;
+                        overflow: hidden;
+                        /*white-space: nowrap;*/
+                        text-overflow: ellipsis; /*...*/
+            }
+            .blueblock:hover{
+                overflow: visible;
+
+            }
+            .yellowblock{background-color: rgb(222,224,85);
+                         color :white;
+                         height: 100px;
+                         width:400px;
+                         /*word-break: break-all;*/
+                         /*word-break: keep-all;*/
+                         word-wrap: break-word;
+            }
+            .greenblock{background-color: greenyellow;
+                         color :rgb(185, 38, 38);
+                         height: 100px;
+                         width:auto;
+            }
+            .great{background-color: #5a3479;}
+        </style>
+
+    </head>
+    <body>
+        <div class="blueblock">
+        FacebookFacebookFacebookFacebookFacebookFacebookFacebookFacebookFacebook
+        FacebookFacebookFacebookFacebookFacebookFacebookFacebookFacebookFacebook
+        FacebookFacebookFacebookFacebookFacebookFacebookFacebookFacebookFacebook
+        FacebookFacebookFacebookFacebookFacebookFacebookFacebookFacebookFacebook
+        FacebookFacebookFacebookFacebookFacebookFacebookFacebookFacebookFacebook
+        FacebookFacebookFacebookFacebookFacebookFacebookFacebookFacebookFacebook
+        FacebookFacebookFacebookFacebookFacebookFacebookFacebookFacebookFacebook
+        FacebookFacebookFacebookFacebookFacebookFacebookFacebookFacebookFacebook
+        </div>
+        <div class="yellowblock">
+            <p>Apple Apple Apple Apple Apple 
+                Apple Apple Apple Apple Apple 
+                vApple Apple Apple Apple Apple 
+                longgggggggggggggggggggggggggggg
+                longerrrrrrrrrrrrrrrrrrrrrrrrr
+                Apple Apple Apple Apple 
+                longgggggggggggggggggggggggggggg
+                longerrrrrrrrrrrrrrrrrrrrrrrrr
+
+
+            </p>
+        </div>
+        <div class="greenblock">
+            <p>Microsoft</p>
+        </div>
+    </body>
+</html>

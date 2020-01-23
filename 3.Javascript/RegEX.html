@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+
+<htm>
+    <head>
+        <meta charset="utf-8">
+        <title>RegEX</title>
+
+
+    </head>
+    <body>
+        <p>String:<span id="string"></span></p>
+        <p>pattern: <span id = "pattern"></span></p>
+        <p>Result(search):<span id= "search"></span></p>
+        <p>Result(Match):<span id= "match"></span></p>
+        <p>Result(test):<span id= "test"></span></p>
+        <script >
+            var str = "Atlanta \n 578421 6%";
+            //var pattern = /[a-z]/g; // a-z
+            //var pattern = /[atn]/g; //atn only
+            //var pattern = /[^atn]/g; //not atn
+            //var pattern = /[4-7]/
+            //var pattern = /\d/ //digit
+            //var pattern = /\w/g; //all char and num
+            //var pattern = /\W/g; //not char and num
+            //var pattern = /\s/g; //space
+            //var pattern = /\d{4}/g; //four digit
+            //var pattern = /^A/g ; //search capital A for first char
+            //var pattern = /^b/g 
+            var pattern = /\n/g;
+            //var pattern = new RegExp("a","g");
+            //window.alert(str.search(pattern)); //retun pos
+            //window.alert(str.match(pattern)); //return char
+            //window.alert(pattern.test(str)); //test that is exist ?
+            document.getElementById("string").innerHTML = str ;
+            document.getElementById("pattern").innerHTML = pattern ;
+            document.getElementById("search").innerHTML = str.search(pattern)  ;
+            document.getElementById("match").innerHTML = str.match(pattern);
+            document.getElementById("test").innerHTML = pattern.test(str) ;
+        </script>
+
+    </body>
+
+
+
+</htm>

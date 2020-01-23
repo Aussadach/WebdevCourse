@@ -1,0 +1,116 @@
+<!DOCTYPE html>
+
+<html>
+    <head>
+
+        <meta  charset="utf-8">
+        <title>jQuery Effect</title>
+        <style>
+            .blueblock{ background-color: #4267B2;
+                        color :white;
+                        height: 100px;
+                        width: 300px;
+            }
+            .yellowblock{background-color: rgb(222,224,85);
+                         color :white;
+                         height: 100px;
+                         width:auto;
+            }
+            .greenblock{background-color: greenyellow;
+                         color :white;
+                         height: auto ;
+                         width:auto;
+            }
+            .great{background-color: #5a3479;}
+            .sans-seriff{
+                font-family:sans-serif;
+
+            }
+            #fadeOutFacebook{
+                font-size: 50px;
+
+
+            } 
+            p{
+                margin: 0;
+            }
+        </style>
+        <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+
+    </head>
+    <body>
+        <button id="fadeOutFacebook">fade Out</button>
+        <button id="fadeInFacebook">fade in</button>
+        <button id="fadetoggle">fade toggle</button>
+        <button id="animate">Animation</button>
+        <div class="blueblock" id="facebook">
+
+            <p>Facebook is <span class="great" id="Great"> great
+                
+            </span>.</p>
+            
+        </div>
+        <div class="yellowblock sans-seriff" id="apple">
+            <p>Apple</p>
+        </div>
+        <div class="greenblock" id ="microsoft">
+            <p id="MicrosoftParagraph">Microsoft</p>
+            <p><a href="http://www.mircrosoft.com" title="microsoft" id="microsoftlink">Microsoft Link</a></p>
+        </div>
+        
+        <p>Enter Your name<input type="#"></p>
+        
+        <script>
+            $(function(){
+                $("#fadeOutFacebook").click(function(){
+                    //$("#facebook").fadeOut("fast");
+                    $("#facebook").fadeOut(3000,function(){
+                        window.alert("Hi!");
+                    });
+
+
+                });
+                $("#fadeInFacebook").click(function(){
+                    //$("#facebook").fadeOut("fast");
+                    $("#facebook").fadeIn(3000,function(){
+                        
+                    });
+
+
+                
+
+
+
+                });
+                $("#fadetoggle").click(function(){
+                    //$("#facebook").fadeOut("fast");
+                    $("#facebook").fadeToggle(1000);
+                    $("#apple").fadeToggle(2000);
+                    $("#microsoft").fadeToggle(3000);
+
+                    
+
+                
+
+
+
+                });
+                // $("#animate").click(function(){
+                //     $("#facebook").animate({width:'200px',hight:'50px',opacity:'0.5'},1000);
+
+
+                // });
+                $("#animate").click(function(){
+                    $("#facebook").animate({width:'200px'},1000);
+
+                    $("#facebook").animate({hight:'50px'},1000);
+                    $("#facebook").animate({opacity:'0.5'},1000);
+                    $("#facebook").delay(3000).animate({width:'300px'},"slow");
+                });
+
+
+            })
+
+        </script>
+    </body>
+</html>

@@ -1,0 +1,104 @@
+<!DOCTYPE html>
+
+<html>
+    <head>
+
+        <meta  charset="utf-8">
+        <title>jQuery Effect</title>
+        <style>
+            .blueblock{ background-color: #4267B2;
+                        color :white;
+                        height: auto;
+                        width: auto ;
+            }
+            .yellowblock{background-color: rgb(222,224,85);
+                         color :white;
+                         height: auto;
+                         width:auto;
+            }
+            .greenblock{background-color: greenyellow;
+                         color :white;
+                         height: auto ;
+                         width:auto;
+                         margin-bottom: 30px;
+            }
+            .great{background-color: #5a3479;}
+
+
+
+        
+         
+        </style>
+        <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+        <link
+        rel="stylesheet"
+        href="https://ajax.googleapis.com/ajax/libs/jqueryui/1.12.1/themes/start/jquery-ui.css"
+    />
+        <script src="https://ajax.googleapis.com/ajax/libs/jqueryui/1.12.1/jquery-ui.min.js"></script>
+</head>
+    </head>
+    <body>
+        
+        <div class="blueblock ui-corner-all" id="facebook">
+
+            <p>Facebook is <span class="great" id="Great"> great</span>.</p>
+            <p>
+                <input id="myInput" name="myInput" value="30" title="Please Enter value">
+            </p>
+
+
+        </div>
+        
+            <div class="yellowblock sans-seriff ui-corner-all" id="apple">
+                <p>Apple</p>
+                <ul>
+                    <li><a href="#tab1">tab1</a></li>
+                    <li><a href="#tab2">tab2</a></li>
+                    <li><a href="#tab3">tab3</a></li>
+                </ul>
+
+                <div><p id="tab1">Content1</p></div>
+                <div><p id="tab2">Content2</p></div>
+                <div><p id="tab3">Content3</p></div>
+
+        </div>
+        <div class="greenblock ui-corner-all" id ="microsoft" title="Microsoft">
+            <p id="MicrosoftParagraph">Microsoft</p>
+            <p><a href="http://www.mircrosoft.com" title="microsoft" id="microsoftlink">Microsoft Link</a></p>
+
+
+        </div>
+
+        <script>
+            $(function(){  
+                $("#myInput").spinner({
+                    min:0,
+                    max:100,
+                    step:3
+                });
+                $("#apple").tabs({
+                    collapsible: true,
+                    event:"mouseover", //when hover out go tocontent
+
+
+                });
+                $("#apple").tabs().find(".ui-tabs-nav").sortable({
+                    axis: "x" //can drae and drop tab
+                });
+                $(document).tooltip();
+                 $("#myInput").tooltip({
+                     show:{effect:"slideDown"}
+                 });
+
+
+
+
+            
+            
+            
+            });
+
+
+        </script>
+    </body>
+</html>

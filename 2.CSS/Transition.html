@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+
+<html>
+    <head>
+
+        <meta  charset="utf-8">
+        <title>3D transform</title>
+        <style>
+            .blueblock{ background-color: #4267B2;
+                        color :white;
+                        height: 100px;
+                        width:100px;
+                        transition: width 1s;
+
+
+            }
+            .blueblock:hover{
+                width: 300px;
+                height: 200px;
+            }
+            .yellowblock{background-color: rgb(222,224,85);
+                         color :white;
+                         height: 100px;
+                         width:auto;
+            }
+            .greenblock{background-color: crimson;
+                         color :white;
+                         height: 100px;
+                         width:auto;
+                         transition: width  1s , height 1s ,transform 1s;
+            }
+            .greenblock:hover{
+                width: 300px;
+                height: 200px;
+                transform: rotateX(180deg);
+
+            }
+            .great{background-color: #5a3479;}
+        </style>
+
+    </head>
+    <body>
+        <div class="blueblock">
+
+            <p>Facebook is <span class="great"> great
+                
+            </span>.</p>
+            
+        </div>
+        <div class="yellowblock">
+            <p>Apple</p>
+        </div>
+        <div class="greenblock">
+            <p>Microsoft</p>
+        </div>
+    </body>
+</html>

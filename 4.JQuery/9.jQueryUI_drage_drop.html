@@ -1,0 +1,121 @@
+<!DOCTYPE html>
+
+<html>
+	<head>
+		<meta charset="utf-8" />
+		<title>jQuery Effect</title>
+		<style>
+			.blueblock {
+				background-color: #4267b2;
+				color: white;
+				height: 100px;
+				width: auto;
+			}
+			.yellowblock {
+				background-color: rgb(222, 224, 85);
+				color: white;
+				height: 100px;
+				width: auto;
+			}
+			.greenblock {
+				background-color: greenyellow;
+				color: white;
+				height: auto;
+				width: auto;
+			}
+			.great {
+				background-color: #5a3479;
+			}
+			.sans-seriff {
+				font-family: sans-serif;
+			}
+            #dropable{
+                background-color: #78afee;
+				color: white;
+				height: 500px;
+				width: autopx;
+                margin-top: 20px;
+
+            }
+		</style>
+		<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+		<link
+			rel="stylesheet"
+			href="https://ajax.googleapis.com/ajax/libs/jqueryui/1.12.1/themes/smoothness/jquery-ui.css"
+		/>
+		<script src="https://ajax.googleapis.com/ajax/libs/jqueryui/1.12.1/jquery-ui.min.js"></script>
+	</head>
+    
+    <body>
+		<button>Button</button>
+		<div class="blueblock ui-corner-all" id="facebook">
+			<p>Facebook is <span class="great" id="Great"> great </span>.</p>
+		</div>
+		<div class="yellowblock sans-seriff ui-corner-all" id="apple">
+            <p>Apple</p>
+            <ul id="list">
+                <li>eggs</li>
+                <li>milk</li>
+                <li>bread</li>
+            </ul>
+		</div>
+		<div class="greenblock ui-corner-all" id="microsoft">
+			<p id="MicrosoftParagraph">Microsoft</p>
+			<p>
+				<a href="http://www.mircrosoft.com" title="microsoft" id="microsoftlink"
+					>Microsoft Link</a
+				>
+			</p>
+        </div>
+        <div class="ui-state-error" , style="height: 100px; margin-top: 20px;">
+            <p>Error Message</p>
+
+
+        </div>
+    
+
+        <p>Enter Your name<input type="#" /></p>
+        <div class="ui-corner-all" id="dropable"><p>You can drop here</p></div>
+
+		<script>
+            var Message=["Please!","Leave me alone","Drop me!","come on!"]
+			$(function() {
+                $("#facebook").draggable();
+                $("#apple").draggable({
+                    axis:"y"
+                });
+                $("#microsoft").draggable({
+                    revert : true,
+                    start:function(){
+                        $("#facebook").css("background-color","#43c84d4");
+
+                    },
+                    drag : function(){
+                        $("#microsoft").css("background-color",'rgb('+Math.floor(Math.random()*256)+','+Math.floor(Math.random()*256)+','+Math.floor(Math.random()*256)+')');
+                        $("#microsoft").find("p").html(Message[Math.floor(Math.random()*4)]);
+                    },
+                    stop: function(){
+                        $("#apple").css("background-color","#b1e269")
+                        $("#microsoft").html('<p>Finally</p>')
+                    }
+                    
+                });
+                $("#dropable").droppable({
+                    drop: function(event, ui){
+                        $(this).css("background-color","#21dd85");
+                        $(this).find("p").remove();
+                        $("<div></div>").text(ui.draggable.text()).appendTo(this);
+                    },
+                    //accept : "#facebook" ,
+                    accept : "#list li  , #facebook "
+                });
+                $("#list").find("li").draggable({
+                    helper : "clone",
+                    appendTo: "body"
+                });
+
+                
+            });
+		</script>
+	</body>
+</html>

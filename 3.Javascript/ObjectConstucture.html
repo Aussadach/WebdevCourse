@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+
+<htm>
+    <head>
+        <meta charset="utf-8">
+        <title>Object Construct</title>
+
+
+    </head>
+    <body>
+        <p>Javascript.</p>
+        <script >
+        function phone(make, model ,warranty, color){
+                    this.make = make;
+                    this.model = model;
+                    this.warranty = warranty;
+                    this.color = color ;
+                    this.extendWarranty = function(x){
+                        this.warranty += x;
+
+                    }
+        }
+        var myPhone = new phone("Apple", "Iphone 5", 12 ,"White");
+        window.console.log(myPhone);
+        myPhone.extendWarranty(1)
+        window.console.log(myPhone); 
+
+        myPhone.condition = "like new"; //Add to only object not prototype
+        window.console.log(myPhone.condition);
+
+
+        var myBrothersPhone = new phone("Samsung","S4",6,"Black"); //make new object
+        window.console.log(myBrothersPhone);
+        window.console.log(myPhone);
+        window.console.log(myBrothersPhone.condition);
+
+        phone.prototype.condition = "new"; //This will add to prototype
+        window.console.log(myBrothersPhone.condition); 
+        </script>
+
+    </body>
+
+
+
+</htm>

@@ -1,0 +1,116 @@
+
+<!DOCTYPE html>
+
+<html>
+	<head>
+		<meta charset="utf-8" />
+		<title>JQuery</title>
+		<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+		<style>
+			.blueblock {
+				background-color: #4267b2;
+				color: white;
+				height: auto;
+				width: auto;
+			}
+			.yellowblock {
+				background-color: rgb(222, 224, 85);
+				color: white;
+				height: auto;
+				width: auto;
+			}
+			.greenblock {
+				background-color: greenyellow;
+				color: black;
+				height: auto;
+				width: auto;
+			}
+		</style>
+	</head>
+	<body>
+		<div class="blueblock">
+            <p>Facebook is <span id="great"> great </span>.</p>
+            <p class="orange">a Paragraph</p>
+            <p>Paragraph3</p>
+		</div>
+		<div class="yellowblock">
+            <p>Apple</p>
+            <p><a href="http://www.google.com">Paragraph3</a href="http://www.google.com" ></p>
+            <p><a href="http://www.microsoft.com">another link</a></p>
+            <ul>
+                <li>BMW</li>
+                <li>Audi</li>
+                <li>Mercedes</li>
+            </ul>
+		</div>
+		<p>a paragraph</p>
+		<div class="greenblock">
+            <p>Microsoft</p>
+            <ul>
+                <li>BMW</li>
+                <li>Audi</li>
+                <li>Mercedes</li>
+            </ul>
+
+            <table>
+                <tr><th>Phone</th><th>model</th><th>Memory</th></tr>
+                <tr><th>Apple</th><th>IPhone</th><th>4GB</th></tr>
+                <tr><th>Apple</th><th>IPhone</th><th>4GB</th></tr>
+                <tr><th>Apple</th><th>IPhone</th><th>4GB</th></tr>
+                <tr><th>Apple</th><th>IPhone</th><th>4GB</th></tr>
+                
+            </table>
+            <p>Type you name:<input ><button type="submit" id="submit">Submit</button></p>
+		</div>
+		<script>
+			$(function() {
+                $("p").click(function(){
+                    // $("p").css("background-color","rgba(206,152,230,0.697)")
+                    //$(this).css("background-color","rgba(206,152,230,0.697)");
+                    
+
+
+                })
+                $("p").mouseover(function(){
+                        $(this).css("background-color","rgba(206,152,230,0.697)");
+
+                    }
+                    );
+                $("p").mouseout(function(){
+                        $(this).css("background-color","");
+
+                    }
+                );
+                $("input").focus(function(){
+                        $(this).css("background-color","rgba(210,195,131,0.637)");
+
+
+                });
+                $("input").blur(function(){
+                        $(this).css("background-color","#ffffff");
+
+
+                });
+                $("input").keyup(function(){
+                    $(this).css("background-color","rgba(39,190,162,0.697)");
+
+
+                });
+                // $("#submit").click(function(){
+                //     $('#input').css("background-color","#ffffff");
+                //     $('#input').val("");
+
+                // });
+                $("#submit").click(function(){
+                    $("#input").css("background-color","#ffffff");
+                    $("#input").val("");
+                                    }
+                          );
+
+
+
+                
+			});
+		</script>
+	</body>
+</html>

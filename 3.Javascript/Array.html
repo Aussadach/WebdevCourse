@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+
+<htm>
+    <head>
+        <meta charset="utf-8">
+        <title>Object Construct</title>
+
+
+    </head>
+    <body>
+        <p id="myParagraph">Javascript.</p>
+        <script >
+        var shoppingList = ["bread", "eggs", "milk"];
+        showResult(shoppingList);
+        showResult(shoppingList[0]);
+        showResult(shoppingList[2]);
+        //var shoppingList    = new Array("bread", "eggs","milk")
+        document.getElementById("myParagraph").innerHTML += "<br />" +shoppingList;
+        document.getElementById("myParagraph").innerHTML += "<br />" +shoppingList[0];
+        
+        function showResult(x){
+            document.getElementById("myParagraph").innerHTML += "<br />" +x;
+
+        }
+        shoppingList[1] = "yogurt";
+        showResult(shoppingList);
+        shoppingList[2] = "oranges";
+        showResult(shoppingList);
+
+        delete shoppingList[1]; //delete only value
+        showResult(shoppingList);
+
+        //window.alert(shoppingList[1]);
+
+        shoppingList[1] = "yog";
+        showResult(shoppingList);
+        shoppingList.splice(1,1);
+        showResult(shoppingList);
+        shoppingList.splice(1,1);
+        showResult(shoppingList);
+        shoppingList.splice(0,0,"Banana","Apple");
+        showResult(shoppingList);
+        shoppingList.sort();
+        showResult(shoppingList);
+        shoppingList.reverse();
+        showResult(shoppingList);
+
+        var myString = "ABCD";
+        var myArray = myString.split();
+        showResult(myArray);
+        var myArray = myString.split(""); //split by 
+        showResult(myArray);
+        var myString = "A   BCD";
+        var myArray = myString.split("");
+        showResult(myArray);
+        var myString = "A B C D";
+        var myArray = myString.split(" ");
+        showResult(myArray);
+        </script>
+
+    </body>
+
+
+
+</htm>

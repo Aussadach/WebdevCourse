@@ -1,0 +1,185 @@
+body {
+  font: Arial, Helvectica, sans-seriff;
+}
+
+#container {
+  width: 1800px;
+  /*border : 1px solid grey;*/
+
+  margin: 0 auto;
+}
+
+#header {
+  height: 100px;
+  padding: 10px;
+}
+
+h1 a {
+  font-size: 50px;
+  font-weight: 200;
+  color: blueviolet;
+  text-decoration: none; /*remove link att*/
+}
+
+#brand {
+  float: left;
+}
+
+#searchBox {
+  float: right;
+  background: linear-gradient(rgb(219, 219, 67), rgb(200, 250, 135));
+  background: -webkit-linear-gradient(rgb(219, 219, 67), rgb(200, 250, 135));
+  background: -o-linear-gradient(rgb(219, 219, 67), rgb(200, 250, 135));
+  background: -moz-linear-gradient(rgb(219, 219, 67), rgb(200, 250, 135));
+  width: 400px;
+  height: 60px;
+  padding: 27px 10px 0px 10px;
+  margin-top: 20px;
+}
+
+.text {
+  float: left;
+  width: 200px;
+  padding: 5px;
+  font-size: 15px;
+  color: coral;
+  background: white url(images/LogoMakr_0ewa43\res.png) right center no-repeat;
+  border: 1px solid #c8d03e;
+}
+
+.submit {
+  float: right;
+  padding: 5px;
+  color: white;
+  background: orangered;
+  border: none;
+  font-size: 15px;
+}
+
+.clear {
+  clear: both;
+}
+
+ul {
+  list-style: none;
+}
+
+#menu {
+  height: 80px;
+  background: linear-gradient(#f8f594, #d5d533);
+  background: -webkit-linear-gradient(#f8f594, #d5d533);
+  background: -o-linear-gradient(#f8f594, #d5d533);
+  background: -moz-linear-gradient(#f8f594, #d5d533);
+  padding: 7px 0;
+}
+
+#menu ul li {
+  float: left;
+  padding: 0 100px;
+  height: 20px;
+  border-right: 1px solid #5d12e7;
+}
+
+#menu ul li a {
+  text-decoration: none;
+  text-transform: uppercase;
+  font-size: 17px;
+  color: #5d12e7;
+  line-height: 30px;
+  -webkit-transition: font-size 1s ease;
+  -moz-transition: font-size 1s ease;
+  -o-transition: font-size 1s ease;
+  -ms-transition: font-size 1s ease;
+  transition: font-size 1s ease;
+}
+
+#menu ul li a:hover,
+#menu ul li a.active {
+  font-size: 20px;
+  font-weight: bold;
+  color: #c34fdb;
+}
+
+#menu ul li:last-child {
+  border-right: none;
+}
+
+#introduction {
+  background: linear-gradient(#e5f2bb, #b7e952);
+  padding: 30px;
+  margin: 15px 0;
+}
+
+#introduction h3 {
+  font-size: 50px;
+  color: rgb(49, 105, 1);
+  font-weight: normal;
+}
+
+#introduction p {
+  font-size: 25px;
+  color: #789450;
+  text-align: justify;
+}
+
+.sidebar {
+  height: 500px;
+  width: 820px;
+  border: 1px solid #baf46f;
+  border-radius: 20px;
+  padding: 10px 30px;
+}
+.sidebar h3 {
+  color: blueviolet;
+  font-size: 30px;
+}
+
+.sidebar ul li a {
+  text-decoration: none;
+  font-size: 20px;
+  color: #5d12e7;
+}
+
+#Leftsidebar ul li {
+  padding-bottom: 3px;
+  padding-top: 3px;
+  list-style-image: url(images/LogoMakr_5XxKOS\arrow.png);
+  padding-left: 10px;
+}
+#leftsidbar ul {
+  padding-top: 8px;
+}
+#Rightsidebar ul li {
+  padding-bottom: 20px;
+  padding-top: 20px;
+  background: url(images/tick.png) no-repeat left center;
+  padding-left: 70px;
+}
+
+.sidebar ul li a:hover,
+.sidebar ul li a.active {
+  text-decoration: none;
+  color: #c34fdb;
+  font-size: 25px;
+  font-weight: bold;
+  -webkit-transition: font-size 1s ease;
+  -moz-transition: font-size 1s ease;
+  -o-transition: font-size 1s ease;
+  -ms-transition: font-size 1s ease;
+  transition: font-size 1s ease;
+}
+
+#Leftsidebar {
+  float: left;
+}
+
+#Rightsidebar {
+  float: Right;
+}
+
+.footer {
+  height: 60px;
+  background: linear-gradient(#f6f390, #d5d533);
+  padding: 10px 30px;
+  margin-top: 10px;
+}

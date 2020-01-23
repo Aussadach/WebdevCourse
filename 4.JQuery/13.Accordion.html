@@ -1,0 +1,134 @@
+<!DOCTYPE html>
+
+<html>
+    <head>
+
+        <meta  charset="utf-8">
+        <title>jQuery Effect</title>
+        <style>
+            .blueblock{ background-color: #4267B2;
+                        color :white;
+                        height: auto;
+                        width: auto ;
+            }
+            .yellowblock{background-color: rgb(222,224,85);
+                         color :white;
+                         height: auto;
+                         width:auto;
+                         padding: 10px;
+            }
+            .greenblock{background-color: greenyellow;
+                         color :white;
+                         height: auto ;
+                         width:auto;
+                         padding: 10px;
+            }
+            .great{background-color: #5a3479;}
+            .sans-seriff{
+                font-family:sans-serif;
+
+            }
+            li{
+                font-size: 2em;
+                margin-bottom: 5px;
+                text-align: center;
+            }
+            #list .ui-selecting{
+                background: #740da0;
+
+            }
+            #list .ui-selected{
+                background: #953ebb;
+
+            }
+            .connectedList{
+                border: 1px solid #eee;
+                min-height: 20px;
+            }
+         
+        </style>
+        <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+        <link
+        rel="stylesheet"
+        href="https://ajax.googleapis.com/ajax/libs/jqueryui/1.12.1/themes/smoothness/jquery-ui.css"
+    />
+        <script src="https://ajax.googleapis.com/ajax/libs/jqueryui/1.12.1/jquery-ui.min.js"></script>
+</head>
+    </head>
+    <body>
+        <button>Button</button>
+        <div id="resizer" class="ui-widget-content">
+            <div class="blueblock" id="facebook">
+                <!-- <p>Facebook is <span class="great" id="Great"> great</span>.</p> -->
+                <h3>Section 1</h3>
+                <div><p>Content 1</p>
+                    <p>Content 2</p>
+                    <p>Content 3</p>
+                    <p>Content 4</p>
+                </div>
+                <h3>Section 2</h3>
+                <div>Content 2</div>
+                <h3>Section 3</h3>
+                <div>Content 3</div>
+                
+            </div>
+
+        </div>
+        <div class="yellowblock sans-seriff" id="apple">
+            <p>Apple</p>
+            <ul id="list1" class="connectedList">
+                <li class="ui-state-default">Audi</li>
+                <li class="ui-state-default">BMW</li>
+                <li class="ui-state-default">Mercedes</li>
+                <li class="ui-state-default notSortable">Toyota</li>
+
+            </ul>
+        </div>
+
+        <div class="greenblock" id ="microsoft">
+            <p id="MicrosoftParagraph">Microsoft</p>
+            <p><a href="http://www.mircrosoft.com" title="microsoft" id="microsoftlink">Microsoft Link</a></p>
+            <ul id="list2" class="connectedList">
+                <li class="ui-state-default">Audi</li>
+                <li class="ui-state-default">BMW</li>
+                <li class="ui-state-default">Mercedes</li>
+                <li class="ui-state-default notSortable">Toyota</li>
+
+            </ul>
+        
+        </div>
+        
+        <p>Enter Your name<input type="#"></p>
+        
+        <script>
+            $(function(){  
+                $("#list1").sortable({
+                    placeholder: "ui-state-highlight" ,
+                    cancel : ".notSortable"
+                });
+                $("#list2").sortable({});
+                $("#list1,#list2").sortable({
+                    connectWith : ".connectedList"
+                })
+
+                $("#facebook").accordion({
+                    collapsible : true,
+                    icons:{
+                        header:"ui-icon-circle-triangle-s",
+                        activeHeader:"ui-icon-circle-minus"
+                    },
+                    heightStyle: "content"
+
+                });
+                $("#resizer").resizable({
+                    resize:function(){
+                        $("#facebook").accordion("refresh");
+
+                    }
+
+
+                });
+            });
+        </script>
+    </body>
+</html>

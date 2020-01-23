@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+
+<html>
+    <head>
+
+        <meta  charset="utf-8">
+        <title>Internal CSS</title>
+        <style>
+            a:link{
+
+                color:lime;
+            }
+            a:hover{
+
+                font-size: 3em;
+                color:lime;
+            }
+            .blueblock{ background-color: #4267B2;
+                        color :white;
+                        height: 100px;
+                        width:auto;
+            }
+            div.blueblock a:active{
+                font-size: 4em;
+                font-size: 6em;
+
+            }
+            .yellowblock{background-color: rgb(222,224,85);
+                         color :white;
+                         height: 100px;
+                         width:auto;
+
+            }
+            div.yellowblock a:visited{
+                                color: orangered;        
+            }
+            .greenblock{background-color: greenyellow;
+                         color :white;
+                         height: 100px;
+                         width:auto;
+            }
+            .great{background-color: #5a3479;}
+        </style>
+
+    </head>
+    <body>
+        <div class="blueblock">
+
+            <p>Facebook is <span class="great"> great
+               
+            </span>.</p>
+            <p><a href="http://www.amazon.com">Visit amazon </a></p>
+        </div>
+
+        <div class="yellowblock">
+            <p>Apple</p>
+            <p><a href="http://www.amazon.com">Visit amazon </a></p>
+        </div>
+        <div class="greenblock">
+            <p>Microsoft</p>
+        </div>
+    </body>
+</html>

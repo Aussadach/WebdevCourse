@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+
+<html>
+    <head>
+
+        <meta  charset="utf-8">
+        <title>Change html content</title>
+        <style>
+            .blueblock{ background-color: #4267B2;
+                        color :white;
+                        height: 100px;
+                        width:auto;
+            }
+            .yellowblock{background-color: rgb(222,224,85);
+                         color :white;
+                         height: 100px;
+                         width:auto;
+            }
+            .greenblock{background-color: greenyellow;
+                         color :white;
+                         height: 100px;
+                         width:auto;
+            }
+            .great{background-color: #5a3479;}
+        </style>
+
+    </head>
+    <body>
+        <div class="blueblock" id="facebook">
+
+            <p>Facebook is <span class="great"> great
+                
+            </span>.</p>
+            
+        </div>
+        <div class="yellowblock" id="apple">
+            <p>Apple</p>
+        </div>
+        <div class="greenblock">
+            <p>Microsoft</p>
+        </div>
+        <button id="button1"> 
+            change facebook content
+
+        </button>
+        <button id="button2">
+            Change apple content 
+        </button>
+        <script>
+            document.getElementById("button1").onclick = function(){
+                    document.getElementById("facebook").innerHTML = "<p>Facebook.</p>";
+
+
+            }
+            document.getElementById("button2").ondblclick = function(){
+                    document.getElementById("apple").innerHTML = "<ul><li>Iphone</li><li>Ipad</li><li>Apple watch</li></ul> ";
+            }
+            
+        </script>
+        
+    </body>
+</html>
