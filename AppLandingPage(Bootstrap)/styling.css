@@ -1,0 +1,170 @@
+.jumbotron{
+    background: url(https://freenaturestock.s3.us-east-1.amazonaws.com/1674.jpg) center center;
+    background-size: cover;
+    
+    height: 1200px;
+    
+
+}
+/*setting size of logo*/
+.logo{
+    width: 75px;
+    height: 75px;
+
+
+
+}
+
+/*set text color */
+
+.featured{
+    color: #fff;
+
+
+
+
+}
+
+/*creat space between title and logo*/
+.featured h1{
+    padding-top: 60px;
+    font-size: 70px;
+
+}
+.featured p{
+    font-size: 30px;
+
+}
+
+/*style link*/
+
+.featured .btn-default{
+    font-weight: bold;
+    color: white;
+    background-color: rgba(145,82,58,0.5);
+    border-radius: 10px;
+    margin-top: 20px;
+    width: 160px;
+    margin-right: 15px;
+
+}
+
+.featured .btn-default:hover{
+    background-color: rgba(145,82,58,0.8);
+
+}
+
+/*Add styling for device between 480px and 768px*/
+
+@media (min-width:480px) and (max-width:768px){
+    .jumbotron{
+        height: 410px;
+        margin: 0px;
+
+
+    }
+    .logo{
+        width: 50px;
+        height: 50px;
+    }
+    .featured h1{
+        padding-top: 30px;
+
+
+    }
+    .featured p{
+        font-size: 17px;
+
+    }
+    .featured{
+        text-align: center;
+    }
+
+}
+
+/*Add styling for device under 480px */
+
+@media (max-width:480px){
+    .jumbotron{
+        height: 410px;
+        margin: 0px;
+
+
+    }
+    .logo{
+        width: 30px;
+        height: 30px;
+    }
+    .featured h1{
+        padding-top: 6px;
+        font-size: 20px;
+
+    }
+    .featured p,.featured a{
+        font-size: 13px;
+
+    }
+    .featured{
+        text-align: center;
+    }
+    
+    .trial{
+    text-align: center;
+    padding: 20px 0 40px 0 ;
+    color: black;
+
+    }
+
+    .trial img{
+    width: 100px;
+    height: 30px;
+    margin: 10px;
+    }
+
+
+}
+@media (max-width:150px){
+    .jumbotron{
+        height: 200px;
+        margin: 0px;
+
+
+    }
+    .logo{
+        width: 30px;
+        height: 30px;
+    }
+    .featured h1{
+        padding-top: 6px;
+        
+
+    }
+    .featured p,.featured a{
+        font-size: 10px;
+
+    }
+    .featured{
+        text-align: center;
+    }
+
+}
+
+.trial{
+    text-align: center;
+    padding: 20px 0 40px 0 ;
+    color: black;
+
+}
+
+.trial img{
+    width: 200px;
+    height: 70px;
+    margin: 20px;
+}
+/*style footer*/
+.footer{
+    background-color: #eee;
+    font-size: 15px;
+    padding: 10px 0;
+}
+
