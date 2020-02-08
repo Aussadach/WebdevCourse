@@ -1,0 +1,136 @@
+/*style body add background set it to cover add font*/
+body{
+    font-family: Arvo,serif;
+    background: url(https://freenaturestock.s3.us-east-1.amazonaws.com/232.jpg) center center no-repeat;
+    background-attachment: fixed;
+    background-size: cover;
+    /*shift content from navbar*/
+    padding-top: 70px;
+}
+
+
+/*style brand*/
+.logo{
+    height: 30px;
+    
+
+}
+
+
+/*style nav bar */
+.navbar-inverse{
+    background: rgba(0,0,0,0.6);
+ }
+.nav li{
+    color: white;
+    font-size: 20px;
+    margin-right: 35px;
+    padding: 10px 0px;
+
+
+}
+.nav li:hover{
+    border-bottom:1px solid turquoise;
+    padding-bottom: 9px;
+    cursor: pointer;
+
+}
+
+
+/*style jumbotron*/
+.jumbotron{
+    background-color: transparent;
+    color:white;
+    text-align: center;
+    margin: 0px;
+    padding: 10px;
+    letter-spacing: 2.5px;
+}
+
+.bodyimage{
+    height: 125px;
+
+
+}
+.col-md-4{
+    text-align: center;
+    color: white;
+    
+
+
+}
+
+.icons p{
+    font-size: 25px;
+
+}
+.icons h2{
+    font-size: 40px;
+
+}
+
+
+
+/*limit width of icon section*/
+.container{
+    max-width: 1920px;
+    padding-top: 30px;
+    
+}
+/*syle icon use grid*/
+
+
+
+
+/*style button*/
+.contact{
+    text-align: center;
+    margin-top: 30px;
+    margin-bottom: 100px;
+
+}
+
+.btn{
+    background: rgba(0,255,184,0.6) ;
+    color: white;
+    border: none;
+    border-radius: 10px;
+    font-size: 20px;
+    padding : 10px 70px ;
+    letter-spacing: 4.3px;
+    
+}
+.btn:hover{
+    background-color: rgba(0,0,0,0.6);
+    color: white;
+    border: none;
+}
+
+
+
+
+
+
+
+/*style footer*/
+.footer{
+    color: white;
+    background-color: rgba(0,0,0,0.6);
+    position: absolute;
+    bottom: 0;
+    width: 100%;
+    font-size: 15px;
+    padding: 10px 0 ;
+
+}
+
+
+
+/*media query for small device*/
+@media (max-width:768px){
+    .bodyimage{
+        height: 70px;
+    }
+
+
+}
